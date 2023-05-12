@@ -1,0 +1,14 @@
+<%- include('../partials/header') %>
+<body>
+    <h1>Skateboards</h1>
+    <ul>
+      <% skateboards.forEach(function(b) { %>
+        <li>
+          <%= b.skateboard %>
+            - 
+          <%= b.done ? 'done' : 'not done' %>
+        </li>
+      <% }); %>
+    </ul>
+</body>
+</html>
