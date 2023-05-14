@@ -1,0 +1,29 @@
+<%- include('../partials/header') %>
+
+<h2>Add A Skate</h2>
+<form action="/skateboards" method="POST">
+  <label>Name:
+    <input type="text" name="name">
+  </label><br>
+  <label>Type
+    <select name="type">
+      <option value="Long Board">Long Board</option>
+      <option value="Short Board">Short Board</option>
+      <option value="Mini Board">Mini Board</option>
+      <option value="Electric">Electric</option>
+      <option value="Other">Other</option>
+    </select>
+  </label><br>
+  <label>Style:
+    <input type="text" name="Style">
+  </label><br>
+  <label>Trucks:
+    <input type="text" name="Trucks">
+  </label><br>
+  <label>Wheels:
+    <input type="number" name="Wheels">
+  </label><br>
+  <button type="submit">Add Skate</button>
+</form>
+
+<%- include('../partials/footer') %>

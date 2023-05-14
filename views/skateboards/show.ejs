@@ -5,19 +5,26 @@
     <tr>
       <th>Name</th>
       <th>Type</th>
+      <th>Trucks</th>
+      <th>Wheel Size</th>
+      <th>Modifications</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
     <% skateboards.forEach(function(b) { %>
-      <tr>
+      <tr><br>
         <td><%= b.name %></td>
         <td><%= b.type %></td>
-        <td><a href="/skateboards/show">DETAILS</a></td>
+        <td><%= b.trucks %></td>
+        <td><%= b.wheels %></td>
+        <td><%= b.modifications %></td>
+        
       </tr>
       <% }); %>
     </tbody>
   </table>
-<a href="/skateboards/new">Add a Skate</a>
+
 
   
 <%- include('../partials/footer') %>
