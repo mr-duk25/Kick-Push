@@ -1,3 +1,4 @@
+
 const Skateboard = require('../models/skateboard');
 
 
@@ -6,13 +7,17 @@ module.exports = {
     index,
     new: newSkate,
     create,
-    show
+    show,
 };
 
+
 async function show(req, res) {
-    const skateboards = await Skateboard.find({});
-    res.render('skateboards/show', { title: 'All Boards', skateboards });
+    const skateboards = await Skateboard.findById(req.params.id);
+    
+    res.render('skateboards/show', { title: 'Details', skateboards });
   }
+
+  
 
 async function create(req, res) {
     try {

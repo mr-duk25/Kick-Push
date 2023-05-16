@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var skateCtrl = require('../controllers/skate-controller');
+var skateCtrl = require('../controllers/skates');
 
 // All actuals paths start with /skateboards
 

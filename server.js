@@ -12,8 +12,9 @@ require('./config/database');
 // configure passport middleware
 require('./config/passport');
 
-var indexRouter = require('./routes/index');
+var indexRouter = require('./routes');
 var skateBoardsRouter = require('./routes/skateboards');
+var reviewBoardsRouter = require('./routes/reviews');
 
 var app = express();
 
@@ -41,6 +42,7 @@ app.use(function (req, res, next) {
 });
 
 app.use('/', indexRouter);
+app.use('/', reviewBoardsRouter);
 app.use('/skateboards', skateBoardsRouter);
 
 // catch 404 and forward to error handler
