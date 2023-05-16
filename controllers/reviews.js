@@ -3,7 +3,21 @@ const Skateboard = require('../models/skateboard');
 
 module.exports = { 
     create,
+    delete: deleteReview
    };
+
+   async function deleteReview(req, res) {
+    const skateboard = await Skateboard.findOne({ 'reviews._id': req.params.id, 'reviews.user': req.user._id });
+    // Rogue user!
+    if (!skateboard) return res.redirect('/skateboards');
+    // Remove the review using the remove method available on Mongoose arrays
+    skateboard.reviews.remove(req.params.id);
+    // Save the updated skateboard doc
+    await skateboard.save();
+    // Redirect back to the skateboard's show view
+    res.redirect(`/skateboards/${skateboard._id}`);
+  }
+    
 
    async function create(req, res) {
     console.log('test')

@@ -11,9 +11,9 @@
     <nav>
         
         <a href="/skateboards" <%- title === 'All Skates' ? 'class="active"' : '' %>>ALL Skates</a>
+        <a href="/"	<%- title === 'Home' ? 'class="active"' : '' %>>
+          K/P</a>
         <% if (user) { %>
-            <a href="/"	<%- title === 'Home' ? 'class="active"' : '' %>>
-                K/P</a>
            
 
           <a href="/logout">LOG OUT</a>
