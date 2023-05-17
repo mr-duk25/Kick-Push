@@ -1,12 +1,13 @@
-var express = require('express');
-var router = express.Router();
-var reviewCtrl = require('../controllers/reviews');
+const express = require('express');
+const router = express.Router();
+const reviewCtrl = require('../controllers/reviews');
+const ensureLoggedIn = require('../config/ensureLoggedIn');
 
 // POST /skateboards/:id/reviews (create review for a movie)
-router.post('/skateboards/:id/reviews', reviewCtrl.create);
+router.post('/skateboards/:id/reviews', ensureLoggedIn, reviewCtrl.create);
 
 // DELETE /reviews/:id
-router.delete('/reviews/:id', reviewCtrl.delete);
+router.delete('/reviews/:id', ensureLoggedIn, reviewCtrl.delete);
 
 
 

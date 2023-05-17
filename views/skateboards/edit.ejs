@@ -1,0 +1,30 @@
+<%- include('../partials/header') %>
+
+<h2>Edit Skate</h2>
+<form id= "edit-skate" action="/skateboards/<%= skateboard.id %>?_method=PUT" method="POST">
+  <label>Name:
+    <input type="text" name="name"value="<%= skateboard.name%>">
+  </label><br>
+  <label>Type:   
+    <select name="type">
+        <% ['Long Board', 'Short Board', 'Mini Board', 'Electric', 'Other'].forEach(function(option) { %>
+          <option value="<%= option %>" <%= skateboard.type == option ? 'selected' : '' %>><%= option %></option>
+        <% }); %>
+      </select>
+  </label><br>
+  <label>Deck Shape:
+    <input type="text" name="deckShape"value="<%= skateboard.deckShape %>">
+  </label><br>
+  <label>Trucks:
+    <input type="text" name="trucks"value="<%= skateboard.trucks %>">
+  </label><br>
+  <label>Wheels:
+    <input type="number" name="wheels"value="<%= skateboard.wheels %>">millimeters
+  </label><br>
+  <label>Modifications:
+    <input type="text" name="modifications"value="<%= skateboard.modifications %>">
+  </label><br>
+  <button type="submit">Update Skate</button>
+</form>
+
+<%- include('../partials/footer') %>

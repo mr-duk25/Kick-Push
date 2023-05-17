@@ -13,11 +13,16 @@
         <td><%= b.name %></td>
         <td><%= b.type %></td>
         <td><a href="/skateboards/<%= b.id %>">DETAILS</a></td>
+        <% if (user) { %>
+        <td><a href="/skateboards/<%= b.id %>/edit">EDIT</a></td>
+        <% } %>
       </tr>
       <% }); %>
     </tbody>
   </table>
+  <% if (user) { %>
 <a href="/skateboards/new">Add a Skate</a>
+<% } %>
 
   
 <%- include('../partials/footer') %>

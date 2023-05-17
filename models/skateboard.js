@@ -31,7 +31,7 @@ const skateBoardSchema = new Schema({
     type: String,
     enum: ['Long Board', 'Short Board', 'Mini Board', 'Electric', 'Other']
   },
-  style: {
+  deckShape: {
     type: String,
   },
   trucks: {
