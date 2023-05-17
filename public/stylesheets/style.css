@@ -6,13 +6,19 @@
 
 body {
   margin: 0;
-  background-color: aquamarine;
   height: 100vh;
   display: grid;
   grid-template-rows: 50px 1fr;
   grid-template-areas: 
-    "nav"
-    "main"
+  "nav"
+  "main"
+}
+
+.landing {
+  background-image: url("/images/shea-rouda-3wZxerh-mwE-unsplash.jpg");
+  background-size: cover;
+  background-position: 100%;
+
 }
 
 body > nav {
@@ -171,7 +177,7 @@ hr {
 .login {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items:stretch;
   height: 34px;
 }
 
@@ -188,5 +194,25 @@ hr {
 .review-user img {
   border-radius: 50%;
   height: 40px;
+}
+
+
+
+
+.landing-div {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: #B8C0C2;
+  height: 80px;
+  opacity: 50%;
+  padding: -20px;
+}
+
+h1 {
+  color: #E8ECEB;
+  font-family: 'Shrikhand', cursive;
+  background-color: #424748;
+  width: 200px;
 }
 
