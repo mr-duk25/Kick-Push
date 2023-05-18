@@ -14,6 +14,17 @@ body {
   "main"
 }
 
+
+body > nav {
+  grid-area: nav;
+  background-color: #B8C0C2;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  padding: 0 20px 0 30px;
+  
+}
+
 .landing {
   background-image: url("/images/shea-rouda-3wZxerh-mwE-unsplash.jpg");
   background-size: cover;
@@ -21,20 +32,6 @@ body {
 
 }
 
-body > nav {
-  grid-area: nav;
-  background-color: #B8C0C2;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 0 20px 0 30px;
-}
-
-nav > img {
-  width: 34px;
-  object-fit: contain;
-  margin-right: auto;
-}
 
 body > main {
   grid-area: main;
@@ -55,6 +52,7 @@ nav > a {
   text-decoration: none;
   padding: 10px;
   border-radius: 5px;
+  font-family: 'Shrikhand', cursive;
 }
 
 nav > a:hover:not(.active) {
@@ -74,11 +72,11 @@ nav > a.active {
 }
 
 #new-form *,
-#add-review-form *,
-#add-performer-form * {
+#add-review-form * {
   font-size: 20px;
   padding: 5px;
   border-radius: 5px;
+  
 }
 
 #new-form input[type="submit"] {
@@ -99,6 +97,7 @@ table thead th {
 table td {
   padding: 10px;
   text-align: center;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 #list td:nth-child(2), #list td:nth-child(3){
@@ -111,6 +110,7 @@ table td {
   padding: 4px;
   text-decoration: none;
   font-size: 14px;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 #list a:hover {
@@ -119,8 +119,10 @@ table td {
 
 #show-page {
   display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 1rem;
+  grid-template-columns:min-content auto;
+  grid-gap: 0.5rem;
+  justify-content: center;
+  align-content: center;
 }
 
 #show-page div:nth-child(even) {
@@ -128,15 +130,15 @@ table td {
 }
 
 #add-review-form,
-#add-performer-form {
+ #edit-skate, 
+ #add-skate {
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 1rem;
   margin-bottom: 2rem;
 }
 
-#add-review-form input[type="submit"],
-#add-performer-form input[type="submit"]  {
+#add-review-form input[type="submit"]  {
   width: 10rem;
   grid-column: 2 / 3;
 }
@@ -172,6 +174,7 @@ hr {
   
 #show-page li {
   font-weight: bold;
+  
 }
 
 .login {
@@ -182,7 +185,8 @@ hr {
 }
 
 .login img {
-  height: 30px;
+  height: 20px;
+  
 }
 
 .review-user {
@@ -213,6 +217,27 @@ h1 {
   color: #E8ECEB;
   font-family: 'Shrikhand', cursive;
   background-color: #424748;
-  width: 200px;
+  width: 180px;
 }
+h2 {
+  color: #424748;
+  font-family: 'Shrikhand', cursive;
+  width: 180px;
+}
+
+
+div {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+#new-skate {
+  display: grid;
+  justify-content: center;
+  color: #424748;
+  padding: 10px;
+  text-align: center;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+
 
