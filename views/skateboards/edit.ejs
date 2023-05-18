@@ -1,5 +1,5 @@
 <%- include('../partials/header') %>
-<main class="main">
+<main class="edit">
 <h2>Edit Skate</h2>
 <form id= "edit-skate" action="/skateboards/<%= skateboard.id %>?_method=PUT" method="POST">
   <label>Name:
@@ -27,4 +27,5 @@
   <button type="submit">Update Skate</button>
 </form>
 </main>
+<footer></footer>
 <%- include('../partials/footer') %>

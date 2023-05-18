@@ -7,6 +7,7 @@
 body {
   margin: 0;
   height: 100vh;
+  overflow-y: scroll;
   
   display: grid;
   grid-template-rows: 50px 1fr;
@@ -25,28 +26,19 @@ body > nav {
   padding: 0 20px 0 30px;
 }
   
-
-.landing {
-  background-image: url("/images/shea-rouda-3wZxerh-mwE-unsplash.jpg");
-  background-size: cover;
-  background-position: 100%;
-
-}
-
-
-body > main {
-  grid-area: main;
+.login {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #E8ECEB;
-  padding: 20px;
-  overflow-y: scroll;
+  justify-content: center;
+  align-items:stretch;
+  height: 34px;
 }
 
-body > main h1:first-child {
-  margin-bottom: 50px;
+.login img {
+  height: 20px;
+  
 }
+
+
 
 nav > a {
   margin: 20px;
@@ -66,6 +58,80 @@ nav > a.active {
   color: white;
   cursor: default;
 }
+
+
+.landing {
+  background-image: url("/images/shea-rouda-3wZxerh-mwE-unsplash.jpg");
+  background-size: cover;
+  background-position: 100%;
+
+}
+
+.landing-div {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-image: linear-gradient(#4dd5f4, #010003);
+  height: 80px;
+  opacity: 40%;
+  padding: -20px;
+}
+
+
+#show-page {
+  display: flex;
+  height: 280px;
+  flex-direction: column;
+  align-items:center;
+  text-align:justify;
+  background-color: #f8fafa;
+  padding: 20px;
+  overflow-y: scroll;
+ 
+}
+
+
+
+
+#show-page ul {
+  margin: 0 0 2rem;
+  padding: 0;
+  list-style: none;
+}
+  
+#show-page li {
+  font-weight: bold;
+  
+}
+
+ main {
+   display: flex;
+   grid-area: main;
+   justify-content:baseline;
+   flex-direction: column;
+   align-items: center;
+   background-color: #000000;
+   border: #8434d3 1px solid;
+  padding: 20px;
+  overflow-y: scroll;
+}
+ .edit{
+   display: flex;
+   grid-area: main;
+   justify-content:baseline;
+   flex-direction: column;
+   align-items: center;
+   background-color: #cdc7c7;
+   border: #8434d3 1px solid;
+  padding: 20px;
+  overflow-y: scroll;
+}
+   
+
+body > main h1:first-child {
+  margin-bottom: 50px;
+}
+
 
 #new-form {
   display: grid;
@@ -134,21 +200,6 @@ table td {
   background-color: rgb(3, 3, 3);
 }
 
-#show-page {
-  display: flex;
-  flex-direction: column;
-  align-items:flex-start;
-  text-align:justify;
-  background-color: #f8fafa;
-  padding: 20px;
-  overflow-y: scroll;
- 
-}
-
-#show-page div:nth-child(even) {
-  font-weight: bold;
-}
-
 #add-review-form,
  #edit-skate, 
  #add-skate {
@@ -185,28 +236,8 @@ hr {
   text-align: center;
 }
 
-#show-page ul {
-  margin: 0 0 2rem;
-  padding: 0;
-  list-style: none;
-}
-  
-#show-page li {
-  font-weight: bold;
-  
-}
 
-.login {
-  display: flex;
-  justify-content: center;
-  align-items:stretch;
-  height: 34px;
-}
 
-.login img {
-  height: 20px;
-  
-}
 
 .review-user {
   display: flex;
@@ -220,18 +251,6 @@ hr {
 }
 
 
-
-
-.landing-div {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  background-color: #B8C0C2;
-  height: 80px;
-  opacity: 50%;
-  padding: -20px;
-}
-
 h1 {
   color: #E8ECEB;
   font-family: 'Shrikhand', cursive;
@@ -239,7 +258,7 @@ h1 {
   width: 180px;
 }
 h2 {
-  color: #424748;
+  color: #030303;
   font-family: 'Shrikhand', cursive;
   width: 180px;
 }
@@ -247,6 +266,11 @@ h2 {
 
 div {
   font-family: 'Roboto Condensed', sans-serif;
+  color: #fbfafa;
+}
+
+strong {
+  color: #fbfafa;
 }
 
 #new-skate {
@@ -260,7 +284,7 @@ div {
 }
 
 footer {
-  border: #010001 1px;
+  border: #010001 1px solid;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,6 +1,7 @@
 <%- include('../partials/header') %>
+  
 
-<section id="show-page">
+<main>
   
       <div>Name: <strong><%= skateboards.name %></strong></div><br>
       <div>Type: <strong><%= skateboards.type %></strong></div><br>
@@ -9,10 +10,9 @@
       <div>Wheel Size: <strong><%= skateboards.wheels %></strong></div><br>
       <div>Modifications: <strong><%= skateboards.modifications %></strong></div>
 
-    
+</main>
 
-
-   
+<section id="show-page">
     <table>
       <thead>
         <tr>
@@ -47,16 +47,14 @@
     </table>
 
     
+<hr>
 
-<br>
-  <h2>Reviews</h2>
-  <br>
   <% if (user) { %>
 <form id="add-review-form" method="POST"
   action="/skateboards/<%= skateboards.id %>/reviews">
-  <label>Review:</label>
-  <textarea name="content"></textarea>
-  <label>Rating:</label>
+  <label>Add Review</label><br>
+  <textarea name="content"></textarea><br>
+  <label>Rating</label><br>
   <select name="rating">
     <option value="1">1</option>
     <option value="2">2</option>
@@ -72,7 +70,8 @@
   <input type="submit" value="Add Review">
 </form>
 <% } %>
-
-
+</section>
+<footer>
+</footer>
   
 <%- include('../partials/footer') %>
