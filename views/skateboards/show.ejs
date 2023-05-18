@@ -2,18 +2,12 @@
 
 <section id="show-page">
   
-      <div>Name:</div>
-      <div><strong><%= skateboards.name %></strong></div>
-      <div>Type:</div>
-      <div><strong><%= skateboards.type %></strong></div>
-      <div>Deck Shape:</div>
-      <div><strong><%= skateboards.deckShape %></strong></div>
-      <div>Trucks:</div>
-      <div><strong><%= skateboards.trucks %></strong></div>
-      <div>Wheel Size:</div>
-      <div><strong><%= skateboards.wheels %></strong></div>
-      <div>Modifications:</div>
-      <div><strong><%= skateboards.modifications %></strong></div>
+      <div>Name: <strong><%= skateboards.name %></strong></div><br>
+      <div>Type: <strong><%= skateboards.type %></strong></div><br>
+      <div>Deck Shape: <strong><%= skateboards.deckShape %></strong></div><br>
+      <div>Trucks: <strong><%= skateboards.trucks %></strong></div><br>
+      <div>Wheel Size: <strong><%= skateboards.wheels %></strong></div><br>
+      <div>Modifications: <strong><%= skateboards.modifications %></strong></div>
 
     
 
@@ -44,19 +38,19 @@
               </form>
             <% } %>
           </td>
-          </tr>
         <% }); %>
-        <tr>
-          <td colspan="3"></td>
-          <td><strong>K/P rating <%= (total / skateboards.reviews.length).toFixed(1) %></strong></td>
+          <!-- <td colspan="3"></td> -->
+          <br>
+          <td id="kp-rating">K/P Rating:</td> <td><%= (total / skateboards.reviews.length).toFixed(1) %></td>
         </tr>
       </tbody>
     </table>
 
     
 
-
-  <br><br><h2>Reviews</h2>
+<br>
+  <h2>Reviews</h2>
+  <br>
   <% if (user) { %>
 <form id="add-review-form" method="POST"
   action="/skateboards/<%= skateboards.id %>/reviews">

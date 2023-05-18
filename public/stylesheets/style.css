@@ -7,6 +7,7 @@
 body {
   margin: 0;
   height: 100vh;
+  
   display: grid;
   grid-template-rows: 50px 1fr;
   grid-template-areas: 
@@ -17,13 +18,13 @@ body {
 
 body > nav {
   grid-area: nav;
-  background-color: #B8C0C2;
+  background-color: #4dd5f4;
   display: flex;
   justify-content:center;
   align-items: center;
   padding: 0 20px 0 30px;
-  
 }
+  
 
 .landing {
   background-image: url("/images/shea-rouda-3wZxerh-mwE-unsplash.jpg");
@@ -49,6 +50,7 @@ body > main h1:first-child {
 
 nav > a {
   margin: 20px;
+  color: #010101;
   text-decoration: none;
   padding: 10px;
   border-radius: 5px;
@@ -57,7 +59,7 @@ nav > a {
 
 nav > a:hover:not(.active) {
   color: white;
-  background-color: #424748;
+  background-color: #010101;
 }
 
 nav > a.active {
@@ -92,11 +94,25 @@ table {
 table thead th {
   padding: 5px;
   border-bottom: 2px solid #424748;
+  font-family: 'Shrikhand', cursive;
+  color: #010101;
 }
 
 table td {
   padding: 10px;
+  border-radius: 35%;
+ 
+  color: rgb(6, 7, 7);
   text-align: center;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+
+
+
+#kp-rating {
+  
   font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -106,7 +122,8 @@ table td {
 
 #list a {
   border-radius: 4px;
-  background-color: #B8C0C2;
+  background-color: #8434d3;
+  color: #fbfafa;
   padding: 4px;
   text-decoration: none;
   font-size: 14px;
@@ -114,15 +131,18 @@ table td {
 }
 
 #list a:hover {
-  background-color: white;
+  background-color: rgb(3, 3, 3);
 }
 
 #show-page {
-  display: grid;
-  grid-template-columns:min-content auto;
-  grid-gap: 0.5rem;
-  justify-content: center;
-  align-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  text-align:justify;
+  background-color: #f8fafa;
+  padding: 20px;
+  overflow-y: scroll;
+ 
 }
 
 #show-page div:nth-child(even) {
@@ -150,7 +170,6 @@ hr {
 #badge-container {
   display: flex;
   flex-wrap: wrap;
-  /* padding: 1rem; */
   width: 80%;
   border: 2px solid #B8C0C2;
   border-radius: .5rem;
@@ -216,7 +235,7 @@ hr {
 h1 {
   color: #E8ECEB;
   font-family: 'Shrikhand', cursive;
-  background-color: #424748;
+  background-color: #010101;
   width: 180px;
 }
 h2 {
@@ -231,13 +250,22 @@ div {
 }
 
 #new-skate {
-  display: grid;
-  justify-content: center;
-  color: #424748;
-  padding: 10px;
-  text-align: center;
+  border-radius: 4px;
+  background-color: #010001;
+  color: #fbfafa;
+  padding: 4px;
+  text-decoration: none;
+  font-size: 14px;
   font-family: 'Roboto Condensed', sans-serif;
 }
 
-
+footer {
+  border: #010001 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("https://i.imgur.com/1TKEdtX.jpg");
+  padding: 20px;
+  overflow-y: scroll;
+}
 

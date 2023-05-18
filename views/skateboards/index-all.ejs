@@ -1,5 +1,4 @@
 <%- include('../partials/header') %>
-
 <table id="list">
   <thead>
     <tr>
@@ -12,17 +11,17 @@
       <tr>
         <td><%= b.name %></td>
         <td><%= b.type %></td>
-        <td><a href="/skateboards/<%= b.id %>">DETAILS</a></td>
+        <td class="index-button"><a href="/skateboards/<%= b.id %>">DETAILS</a></td>
         <% if (user) { %>
-        <td><a href="/skateboards/<%= b.id %>/edit">EDIT</a></td>
+        <td class="index-button"><a href="/skateboards/<%= b.id %>/edit">EDIT</a></td>
         <% } %>
       </tr>
       <% }); %>
     </tbody>
   </table>
-  <% if (user) { %>
-<a id="new-skate" href="/skateboards/new">Add a Skate</a>
-<% } %>
-
-  
+  <footer>
+    <% if (user) { %>
+      <a id="new-skate" href="/skateboards/new">Add a Skate</a>
+      <% } %>
+  </footer>
 <%- include('../partials/footer') %>
